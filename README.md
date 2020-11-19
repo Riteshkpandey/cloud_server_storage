@@ -81,6 +81,11 @@ Your tech lead trusts you to do a good job, but testing is important whether you
  - Write a test that views an existing set of credentials, verifies that the viewable password is unencrypted, edits the credentials, and verifies that the changes are displayed.
  - Write a test that deletes an existing set of credentials and verifies that the credentials are no longer displayed.
 
+
+
+## User Authentication and autherisation Flow chart
+![authentication](https://user-images.githubusercontent.com/39904997/99697885-26e6b380-2ab6-11eb-9561-a733be55cccc.JPG)
+
 ## Final Tips and Tricks
 ### Password Security
 Make sure not to save the plain text credentials of the application's users in the database. That's a recipe for data breach disaster! Use a hashing function to store a scrambled version instead. Your tech lead gave you a class called `HashService` that can hash passwords for you. When the user signs up, you only store a hashed version of their password in the database, and on login, you hash the password attempt before comparing it with the hashed password in the database. Your tech lead knows that can be a little confusing, so they provided this code sample to help illustrate the idea:
